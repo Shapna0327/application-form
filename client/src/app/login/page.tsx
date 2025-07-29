@@ -58,7 +58,7 @@ if(loginMethod === 'email'){
     const identifier = loginMethod === 'email' ? email : countryCode + mobile;
 
     try {
-      const response = await fetch('http://localhost:5000/login/submit', {
+      const response = await fetch('${process.env.NEXT_API}/login/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ identifier, password }),

@@ -101,7 +101,7 @@ export default function SignupPage() {
         };
 
         try {
-            const res = await fetch('http://localhost:5000/signup/submit', {
+            const res = await fetch('${process.env.NEXT_API}/signup/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(signupData),

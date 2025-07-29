@@ -125,7 +125,7 @@ const calculatePercentage = (totalStr: string, obtainedStr: string) => {
   };
 
    try {
-    const res = await fetch('http://localhost:5000/application', {
+    const res = await fetch('${process.env.NEXT_API}/application', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
