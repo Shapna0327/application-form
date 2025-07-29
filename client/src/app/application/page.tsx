@@ -13,7 +13,7 @@ import rawCourses from '../../../data/full_data.json';
 
    const educationLevels = ['10th', 'Diploma', '11th', '12th', 'UG'];
 
-export default function applicationForm() {
+export default function ApplicationForm() {
  const [showModal, setShowModal] = useState(false);
 const [applicationId, setApplicationId] = useState('');
 const [submitted, setSubmitted] = useState('')
